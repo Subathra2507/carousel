@@ -14,6 +14,23 @@
       .navbar .form-control {
         width: 150px; /* Adjusting the search bar for smaller screens */
       }
+
+      .carousel-inner .carousel-item {
+        height: 200px; /* Smaller carousel height for mobile */
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: auto;
+      }
+
+      .model-cards .card {
+        width: 100%; /* Ensuring cards fit well on mobile */
+      }
+
+      .accordion {
+        width: 100%; /* Ensuring accordion also works well on mobile */
+      }
     }
   </style>
 </head>
@@ -37,7 +54,7 @@
             <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
-        <!-- search icons -->
+        <!-- Search Form -->
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" />
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -65,7 +82,6 @@
         </div>
       </div>
 
-      <!-- Add more slides as per your needs -->
       <div class="carousel-item">
         <div class="d-flex align-items-center justify-content-center bg-secondary text-white" style="height: 300px;">
           <div class="text-start">
@@ -85,8 +101,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
       <span class="visually-hidden">previous</span>
@@ -97,12 +113,113 @@
     </button>
   </div>
 
-  <!-- Model Cards Section (This can be left as is, as it adapts well) -->
+  <div class="model-cards">
+    <div class="row row-cols-1 row-cols-md-3 px-5 mt-3 g-4">
+      <div class="col">
+        <div class="card h-150 shadow-sm">
+          <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 200px;">
+            <img src="./images/birds.jpg" style="height: 200px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              The first classification of birds was developed by Francis Willughby and John Ray in their 1676 volume Ornithologiae. Carl Linnaeus modified that work in 1758 to devise the taxonomic classification system currently in use.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div>
+              <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Edit</button>
+            </div>
+            <span class="badge text-white border-rectangle" style="background-color: #A9A9A9;">9 mins</span>
+          </div>
+        </div>
+      </div>
 
-  <!-- Accordion Section (same here, we might need to adjust if any overlap occurs) -->
+      <div class="col">
+        <div class="card h-150 shadow-sm">
+          <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 200px;">
+            <img src="./images/mammals.jpg" style="height: 200px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Mammal classification has been through several revisions since Carl Linnaeus initially defined the class, and at present no classification system is universally accepted.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div>
+              <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Edit</button>
+            </div>
+            <span class="badge text-white border-rectangle" style="background-color: #A9A9A9;">9 mins</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-150 shadow-sm">
+          <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 200px;">
+            <img src="./images/wild-animals.jpg" style="height: 200px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Wildlife refers to undomesticated animals and uncultivated plant species which can exist in their natural habitat. Wildlife can be found in all ecosystems.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div>
+              <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Edit</button>
+            </div>
+            <span class="badge text-white border-rectangle" style="background-color: #A9A9A9;">9 mins</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion Section -->
+  <div class="accordion ms-5 justify-content-center px-2 mt-5" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Destination discover
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Destination discover, Be confident exploring the world with our destination guides. Read about must-see attractions, hidden gems, and local experiences that make each destination unique.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Science
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Science, Explore the intersection of science, environment, and health with our comprehensive coverage ranging from climate change and biodiversity to human health.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Life Style
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Life Style, Elevate your day with products designed to enhance your lifestyle. Whether you're looking for travel essentials to add to your bag or the best tools for outdoor adventures.
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer Section -->
-
   <footer class="container text-center text-muted my-5">
     <p> &copy; 2017-2018 Company, Inc. Privacy</p>
     <p> <a href="#">Back to top</a></p>
