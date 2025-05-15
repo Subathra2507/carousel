@@ -29,8 +29,19 @@
       }
 
       .accordion {
-        width: 100%; /* Ensuring accordion also works well on mobile */
-      }
+        width: 100%;
+        max-width: 700px; /* Ensuring accordion also works well on mobile */
+        margin: 0 auto;
+         }
+        .model-cards .row{
+          max-width: 960px;
+          margin: 0 auto; }
+
+          .accordion-wrapper{
+            max-width: 700px;
+            margin: 0 auto;
+            width: 100%;
+          }
     }
   </style>
 </head>
@@ -114,114 +125,141 @@
   </div>
 
 <div class="model-cards">
-  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center" style="margin: 0 auto; max-width: 96%;">
-    
-    <div class="col" style="max-width: 300px;">
-      <div class="card h-100 shadow-sm">
-        <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
-          <img src="./images/birds.jpg" style="height: 100%; width: 100%; object-fit: cover;">
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-              The first classification of birds was developed by Francis Willughby and John Ray in their 1676 volume Ornithologiae. Most researchers define Avialae as branch-based clade, though definitions vary.          </p>
-        </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <div>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
-            <button class="btn btn-sm btn-outline-secondary">Edit</button>
-          </div>
-          <span class="badge text-white" style="background-color: #A9A9A9;">9 mins</span>
-        </div>
-      </div>
-    </div>
-    
-     <div class="col" style="max-width: 300px;">
-      <div class="card h-100 shadow-sm">
-        <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
-          <img src="./images/mammals.jpg" style="height: 100%; width: 100%; object-fit: cover;">
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Mammal classification has been through several revisions since Carl Linnaeus initially defined the class, and at present no classification system is universally accepted.
-           Most mammals are intelligent.
-          </p>
-        </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <div>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
-            <button class="btn btn-sm btn-outline-secondary">Edit</button>
-          </div>
-          <span class="badge text-white" style="background-color: #A9A9A9;">9 mins</span>
-        </div>
-      </div>
-    </div>
+  <!-- model card 1 -->
 
-
-     <div class="col" style="max-width: 300px;">
-      <div class="card h-100 shadow-sm">
-        <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
-          <img src="./images/images2.jpg" style="height: 100%; width: 100%; object-fit: cover;">
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-           Elephants have been known to humans for millennia, with the earliest documented interactions dating back to 327 BC when Alexander the Great encountered them in India.
-          </p>
-        </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <div>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
-            <button class="btn btn-sm btn-outline-secondary">Edit</button>
-          </div>
-          <span class="badge text-white" style="background-color: #A9A9A9;">9 mins</span>
-        </div>
+  <!-- <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center" style="margin: 0 auto; max-width: 96%;"> -->
+    <div class="container model-cards my-5  d-flex justify-content-center" >
+  <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+  <!-- <div class="col" style="max-width: 300px;"> -->
+    <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+            <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
+      <img src="./images/birds.jpg" class="card-img-top" alt="birds" style="height: 100%; width: 100%; object-fit: cover;">
       </div>
-    </div>
-
-      <div class="col" style="max-width: 300px;">
-      <div class="card h-100 shadow-sm">
-        <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
-          <img src="./images/wild animals.jpg" style="height: 100%; width: 100%; object-fit: cover;">
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Wildlife refers to undomesticated animals and uncultivated plant species which can exist in their natural habitat. Wildlife can be found in all ecosystems.
-            Wildlife refers to undomesticated animals and uncultivated plant species
-          </p>
-        </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <div>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
-            <button class="btn btn-sm btn-outline-secondary">Edit</button>
-          </div>
-          <span class="badge text-white" style="background-color: #A9A9A9;">9 mins</span>
-        </div>
+      <div class="card-body">
+        <p class="card-text">
+          The first classification of birds was developed by Francis Willughby and John Ray in their 1676 volume Ornithologiae. Most researchers define Avialae as branch-based clade, though definitions vary.
+        </p>
       </div>
-    </div>
+      <div class="card-footer d-flex justify-content-between align-items-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModalBirds">View</button>
+
+          <button class="btn btn-sm btn-outline-secondary">Edit</button>
+        </div>
+        <span class="badge bg-secondary">9 mins</span>
+      </div>
     </div>
   </div>
-  <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="viewModalLabel">View Page</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+ 
+
+<!-- model card2 -->
+
+  <div class="col" style="max-width: 300px;">
+    <div class="card h-100 shadow-sm">
+      <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
+      <img src="./images/mammals.jpg" class="card-img-top" alt="birds" style="height: 100%; width: 100%; object-fit: cover;">
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Mammal classification has been through several revisions since Carl Linnaeus initially defined the class, and at present no classification system is universally accepted.
+           Most mammals are intelligent.
+        </p>
+      </div>
+      <div class="card-footer d-flex justify-content-between align-items-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModalBirds">View</button>
+          <button class="btn btn-sm btn-outline-secondary">Edit</button>
         </div>
-        <div class="modal-body">
-          Enquiry about destination places to view the animals!..
+        <span class="badge bg-secondary">9 mins</span>
+        
+      </div>
+    </div>
+  </div>
+  <!-- model card3 -->
+
+
+  <div class="col" style="max-width: 300px;">
+    <div class="card h-100 shadow-sm">
+      <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
+      <img src="./images/images2.jpg" class="card-img-top" alt="birds" style="height: 100%; width: 100%; object-fit: cover;">
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Elephants have been known to humans for millennia, with the earliest documented interactions dating back to 327 BC when Alexander the Great encountered them in India.
+       Elephants are scattered 
+       </p>
+      </div>
+      <div class="card-footer d-flex justify-content-between align-items-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModalBirds">View</button>
+          <button class="btn btn-sm btn-outline-secondary">Edit</button>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+        <span class="badge bg-secondary">9 mins</span>
+      </div>
+    </div>
+  </div>
+   <!-- model card4-->
+
+
+  <div class="col" style="max-width: 300px;">
+    <div class="card h-100 shadow-sm">
+      <div class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 180px;">
+      <img src="./images/wild animals.jpg" class="card-img-top" alt="birds" style="height: 100%; width: 100%; object-fit: cover;">
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Wildlife refers to undomesticated animals and uncultivated plant species which can exist in their natural habitat. Wildlife can be found in all ecosystems.
+            Wildlife refers to undomesticated animals and uncultivated plant species
+        </p>
+      </div>
+      <div class="card-footer d-flex justify-content-between align-items-center">
+        <div class="btn-group" role="group">
+           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModalBirds">View</button>
+           <button class="btn btn-sm btn-outline-secondary">Edit</button>
         </div>
+        <span class="badge bg-secondary">9 mins</span>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <div class="modal fade" id="viewModalBirds" tabindex="-1" aria-labelledby="viewModalBirdsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewModalBirdsLabel">Enquiry</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Enquiry about tourist places to visit the animals!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
 </div>
- </div>
- </div>
- </div>
+  </div>
+</div>
+
+
+
+
+ 
+
+ 
 
 
   <!-- Accordion Section -->
-   <div class="container d-flex justify-content-center mt-5">
-    <div class="accordion w-100" id="accordionExample"> 
+   <!-- <div class="container d-flex justify-content-center mt-5"> -->
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+ <div class="col-md-3 col-lg-11">
+    <div class="accordion " id="accordionExample"> 
   <!-- <div class="accordion ms-5 d-flex justify-content-center px-1 mt-4" id="accordionExample"> -->
     <div class="accordion-item  ">
       <h2 class="accordion-header" id="headingOne">
@@ -263,12 +301,26 @@
     </div>
   </div>
   </div>
+  </div>
+  </div>
 
-  <!-- Footer Section -->
-  <footer class="container text-center text-muted my-5">
-    <p> &copy; 2017-2018 Company, Inc. Privacy</p>
-    <p> <a href="#">Back to top</a></p>
-  </footer>
+
+
+
+
+  
+<footer class="container my-5">
+  <div class="row">
+    <div class="col text-start text-muted">
+      <p>&copy; 2017-2018 Company, Inc. <a href="index.html">Privacy . Terms</a></p>
+      
+    </div>
+    <div class="col text-end">
+      <p><a href="#"> Back to top</a></p>
+    </div>
+  </div>
+</footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
