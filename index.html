@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="./html/carousel.html">Carousel</a>
@@ -62,53 +62,66 @@
   </div>
 </nav>
 
-<!-- Carousel -->
-<div id="mainCarousel" class="carousel slide mt-5 pt-3" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!--  carousel-Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex align-items-center justify-content-center bg-secondary text-white" style="height: 300px;">
+          <div class="text-start">
+            <h1 class="fw-bold">Example Headline.</h1>
+            <p class="lead">SECRETS OF THE PENGUINS changes everything we ever believed to be true.</p>
+            <a class="btn btn-primary btn-lg" href="./html/signup.html"> Sign up today</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex align-items-center justify-content-center bg-secondary text-white" style="height: 300px;">
+          <div class="text-start">
+            <h1 class="fw-bold"> |SCIENCE.</h1>
+            <p class="lead">Explore the intersection of science, environment, and health</p>
+            <a class="btn btn-outline-light btn-lg" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex align-items-center justify-content-center bg-secondary text-white" style="height: 300px;">
+          <div class="text-start">
+            <h1 class="fw-bold"> |Life Style</h1>
+            <p class="lead">Elevate your day with products designed to enhance your lifestyle.</p>
+            <a class="btn btn-lg border-rectangle text-white" style="background-color:cadetblue;" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active bg-secondary text-white d-flex align-items-center justify-content-center">
-      <div class="text-center">
-        <h1 class="fw-bold">Example Headline.</h1>
-        <p class="lead">SECRETS OF THE PENGUINS changes everything we ever believed to be true.</p>
-        <a class="btn btn-primary btn-lg" href="./html/signup.html">Sign up today</a>
-      </div>
-    </div>
-    <div class="carousel-item bg-secondary text-white d-flex align-items-center justify-content-center">
-      <div class="text-center">
-        <h1 class="fw-bold">| SCIENCE.</h1>
-        <p class="lead">Explore the intersection of science, environment, and health</p>
-        <a class="btn btn-outline-light btn-lg" href="#">Learn More</a>
-      </div>
-    </div>
-    <div class="carousel-item bg-secondary text-white d-flex align-items-center justify-content-center">
-      <div class="text-center">
-        <h1 class="fw-bold">| Life Style</h1>
-        <p class="lead">Elevate your day with products designed to enhance your lifestyle.</p>
-        <a class="btn btn-lg text-white" style="background-color:cadetblue;" href="#">Learn More</a>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
 
 <!-- Model Cards Section -->
 <div class="container my-5">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
     <!-- Card Template Start -->
+     <!-- Model card 1... -->
     <div class="col">
       <div class="card h-100 shadow-sm">
         <img src="./images/birds.jpg" class="card-img-top" alt="Birds">
         <div class="card-body">
-          <p class="card-text">Bird classification began with Willughby and Ray in 1676. Avialae is now a common clade.</p>
+          <p class="card-text">The first classification of birds was developed by Francis Willughby and John Ray in their 1676 volume Ornithologiae. Most researchers define Avialae as branch-based clade, though definitions vary.</p>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
           <div class="btn-group">
@@ -119,12 +132,14 @@
         </div>
       </div>
     </div>
-    <!-- Repeat this col for other cards, changing content & image -->
+    
+ <!-- Model card 2... -->
     <div class="col">
       <div class="card h-100 shadow-sm">
         <img src="./images/mammals.jpg" class="card-img-top" alt="Mammals">
         <div class="card-body">
-          <p class="card-text">Mammal taxonomy has evolved since Linnaeus. Most mammals are intelligent.</p>
+          <p class="card-text">Mammal classification has been through several revisions since Carl Linnaeus initially defined the class, and at present no classification system is universally accepted.
+           Most mammals are intelligent.p>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
           <div class="btn-group">
@@ -135,7 +150,46 @@
         </div>
       </div>
     </div>
-    <!-- More cards below... -->
+
+ <!-- Model card 3... -->
+
+
+     <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="./images/images2.jpg" class="card-img-top" alt="Mammals">
+        <div class="card-body">
+          <p class="card-text">Elephants have been known to humans for millennia, with the earliest documented interactions dating back to 327 BC when Alexander the Great encountered them in India.
+       Elephants are scattered </p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
+            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+          </div>
+          <span class="badge bg-secondary">9 mins</span>
+        </div>
+      </div>
+    </div>
+
+ <!-- Model card 4... -->
+
+     <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="./images/wild animals.jpg" class="card-img-top" alt="Mammals">
+        <div class="card-body">
+          <p class="card-text">Wildlife refers to undomesticated animals and uncultivated plant species which can exist in their natural habitat. Wildlife can be found in all ecosystems.
+            Wildlife refers to undomesticated animals and uncultivated plant species</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewModal">View</button>
+            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+          </div>
+          <span class="badge bg-secondary">9 mins</span>
+        </div>
+      </div>
+    </div>
+   
   </div>
 </div>
 
@@ -167,7 +221,7 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          Be confident exploring the world with destination guides. Discover must-sees, hidden gems, and authentic vibes.
+          Destination discover, Be confident exploring the world with our destination guides. Read about must-see attractions, hidden gems, and local experiences that make each destination unique.
         </div>
       </div>
     </div>
@@ -179,7 +233,7 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          Dive into science—climate, biodiversity, health—all under one digital microscope.
+          Science, Explore the intersection of science, environment, and health with our comprehensive coverage ranging from climate change and biodiversity to human health.
         </div>
       </div>
     </div>
@@ -191,7 +245,7 @@
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          Style meets substance. Find tools, hacks, and lifestyle upgrades that make your life easier and fancier.
+          Life Style, Elevate your day with products designed to enhance your lifestyle. Whether you're looking for travel essentials to add to your bag or the best tools for outdoor adventures.
         </div>
       </div>
     </div>
